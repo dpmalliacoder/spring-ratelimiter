@@ -16,4 +16,9 @@ public class RedisController {
     public String greeting(){
         return redisService.greeting();
     }
+
+    @GetMapping("hello")
+    public String hello(){
+        return redisService.hello();
+    }
 }
