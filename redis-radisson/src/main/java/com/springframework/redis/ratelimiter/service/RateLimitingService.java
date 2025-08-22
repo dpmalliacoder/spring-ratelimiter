@@ -12,10 +12,10 @@ import java.time.temporal.ChronoUnit;
 
 @Service
 public class RateLimitingService {
-    @Value("{rateLimit.capacity}") long capacity;
-    @Value("{rateLimit.keepAliveTime}") long keepAliveTime;
-    @Value("{rateLimit.interval}") long interval;
-    @Value("{rateLimit.unit}") String unit;
+    @Value("${rateLimit.capacity}") long capacity;
+    @Value("${rateLimit.keepAliveTime}") long keepAliveTime;
+    @Value("${rateLimit.interval}") long interval;
+    @Value("${rateLimit.unit}") String unit;
 
     private final RedissonClient redissonClient;
 
