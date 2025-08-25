@@ -25,7 +25,7 @@ public class RequestFilter extends OncePerRequestFilter {
             String tenantId = request.getHeader("X-Tenant");
 
             if(tenantId != null) {
-                var bucket = rateLimitBucketService.bucket();
+                var bucket = rateLimitBucketService.bucket(tenantId);
                 var probe = bucket.tryConsumeAndReturnRemaining(1);
 
                 if(probe.isConsumed()){

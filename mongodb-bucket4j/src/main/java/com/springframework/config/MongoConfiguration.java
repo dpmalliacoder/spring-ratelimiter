@@ -20,9 +20,9 @@ public class MongoConfiguration {
 
 
     @Bean
-    public Bucket4jMongoDBAsync.MongoDBAsyncCompareAndSwapBasedProxyManagerBuilder<String> proxyManager(DataSource dataSource){
+    public Bucket4jMongoDBAsync.MongoDBAsyncCompareAndSwapBasedProxyManagerBuilder<String> proxyManager(){
 
-        MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017");
+        MongoClient mongoClient = MongoClients.create("mongodb://admin:secret@localhost:27017");
         MongoDatabase database = mongoClient.getDatabase("bucket4j");
         MongoCollection<Document> collection = database.getCollection("buckets");
 
