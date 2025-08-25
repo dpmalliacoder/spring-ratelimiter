@@ -1,2 +1,2 @@
-# spring-redis-ratelimiter
+# spring-ratelimiter
 spring rate limiter
