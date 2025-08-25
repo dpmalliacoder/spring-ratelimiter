@@ -11,8 +11,9 @@ import static java.time.Duration.ofSeconds;
 
 @Configuration
 public class LettuceConfiguration {
-    public RedisClient redisClient(@Value("${spring.data.redis.host") String host,
-                                   @Value("${spring.data.redis.port") String port) {
+    @Bean
+    public RedisClient redisClient(@Value("${spring.data.redis.host}") String host,
+                                   @Value("${spring.data.redis.port}") String port) {
         return RedisClient.create("redis://password@%s:%s/".formatted(host, port));
     }
 

@@ -16,7 +16,7 @@ public class RateLimitBucketService {
 
     public Bucket bucket(String key){
         BucketConfiguration configuration = BucketConfiguration.builder()
-                .addLimit(limit -> limit.capacity(10).refillGreedy(100, ofMinutes(1)))
+                .addLimit(limit -> limit.capacity(2).refillGreedy(10, ofMinutes(1)))
                 .build();
         return proxyManager.getProxy(key, () -> configuration);
     }
