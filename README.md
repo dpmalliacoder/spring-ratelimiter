@@ -1,7 +1,6 @@
 # spring-ratelimiter
-spring rate limiter
 
-Use case -
+# Use case
 -  To protect your system from overloading you want to introduce the following limitation:
 The bucket size is 50 calls (which cannot be exceeded at any given time), with a "refill rate" of 10 calls per second 
 that continually increases tokens in the bucket. In other words. if the client app averages 10 calls per second, 
