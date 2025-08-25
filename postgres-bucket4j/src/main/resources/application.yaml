@@ -2,13 +2,10 @@ spring:
   application:
     name: postgres-bucket4j
   datasource:
-    url: jdbc:h2:mem:testdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;DATABASE_TO_LOWER=TRUE
-    driver-class-name: org.h2.Driver
-    username: sa
-    password:
-  h2:
-    console:
-      enabled: true
+    url: jdbc:postgres://localhost:5432/ratelimitdb
+    driver-class-name: org.postgres.Driver
+    username: myuser
+    password: mypassword
   jpa:
     hibernate:
       ddl-auto: update
