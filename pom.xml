@@ -33,6 +33,7 @@
 		<module>lettuce-bucket4j</module>
 		<module>redisson-bucket4j</module>
 		<module>postgres-bucket4j</module>
+		<module>mongodb-bucket4j</module>
 	</modules>
 	<properties>
 		<maven.compiler.source>17</maven.compiler.source>
